@@ -1,4 +1,6 @@
-public class Ciudad {
+import java.util.List;
+
+public class Ciudad extends Hospital{
     String codCiudad;
     String nombre;
 
@@ -23,7 +25,15 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
-    public Ciudad(){
+    public Ciudad(String codHospital, String nombre, Ciudad ciudad, int telefono, List<Servicio> servicio, Medico director, String codCiudad){
+    super(codHospital, nombre, ciudad, telefono, servicio, director);
+    }
 
+    @Override
+    public String toString(){
+        return "Ciudad{" +
+                "codCiudad='" + codCiudad + '\'' +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
 }

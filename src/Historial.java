@@ -1,4 +1,6 @@
-public class Historial {
+import java.util.Date;
+
+public class Historial extends Visita{
     String codHistorial;
     Paciente paciente;
 
@@ -23,7 +25,15 @@ public class Historial {
         this.paciente = paciente;
     }
 
-    public Historial(){
+    @Override
+    public String toString(){
+        return "Historial{" +
+                "codHistorial='" + codHistorial + '\'' +
+                ", paciente=" + paciente +
+                '}';
+    }
 
+    public Historial(String codVisita, Date fechaHora, Hospital hospital, Servicio servicio, Medico medico, String diagnosticos, String tratamiento, int numeroCama, Date fechaSalida, Historial historial, String codHistorial, Paciente paciente){
+    super(codVisita, fechaHora, hospital, servicio, medico, diagnosticos, tratamiento, numeroCama, fechaSalida, historial, codHistorial, codVisita);
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.List;
 
-public class Medico {
+public class Medico extends Servicio{
     String codMedico;
     String nombre;
     String primerApellido;
@@ -12,6 +12,7 @@ public class Medico {
     Hospital hospital;
 
     public Medico(String codMedico, String nombre, String primerApellido, String segundoApellido, String DNI, Date fechaNacimiento, List<Servicio> servicios, Hospital hospital){
+        super(codMedico, nombre, primerApellido, segundoApellido, DNI, fechaNacimiento, servicios, hospital);
         this.codMedico = codMedico;
         this.nombre = nombre;
         this.primerApellido = primerApellido;
@@ -86,7 +87,21 @@ public class Medico {
         this.hospital = hospital;
     }
 
-    public Medico(){
+    @Override
+    public String toString(){
+        return "Medico{" +
+                "codMedico='" + codMedico + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", primerApellido='" + primerApellido + '\'' +
+                ", segundoApellido='" + segundoApellido + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", servicios=" + servicios +
+                ", hospital=" + hospital +
+                '}';
+    }
 
+    public Medico(String idServicio, String nombre, List<Hospital> hospitales, int numeroCamas, String comentario){
+    super(idServicio, nombre, hospitales, numeroCamas, comentario);
     }
 }

@@ -25,6 +25,9 @@ public class Visita {
         this.historial = historial;
     }
 
+    public Visita(String codVisita, Date fechaHora, Hospital hospital, Servicio servicio, Medico medico, String diagnosticos, String tratamiento, int numeroCama, Date fechaSalida, Historial historial, String codHistorial, String codVisita1){
+    }
+
     public String getCodVisita(){
         return codVisita;
     }
@@ -103,6 +106,22 @@ public class Visita {
 
     public void setHistorial(Historial historial){
         this.historial = historial;
+    }
+
+    @Override
+    public String toString(){
+        return "Visita{" +
+                "codVisita='" + codVisita + '\'' +
+                ", fechaHora=" + fechaHora +
+                ", hospital=" + hospital +
+                ", servicio=" + servicio +
+                ", medico=" + medico +
+                ", diagnosticos='" + diagnosticos + '\'' +
+                ", tratamiento='" + tratamiento + '\'' +
+                ", numeroCama=" + numeroCama +
+                ", fechaSalida=" + fechaSalida +
+                ", historial=" + historial +
+                '}';
     }
 
     public Visita(){

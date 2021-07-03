@@ -75,6 +75,19 @@ public class Paciente {
         this.numeroSeguridadSocial = numeroSeguridadSocial;
     }
 
+    @Override
+    public String toString(){
+        return "Paciente{" +
+                "codPaciente='" + codPaciente + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", primerApellido='" + primerApellido + '\'' +
+                ", segundoApellido='" + segundoApellido + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", numeroSeguridadSocial='" + numeroSeguridadSocial + '\'' +
+                '}';
+    }
+
     public Paciente(){
 
     }
